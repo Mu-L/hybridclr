@@ -56,19 +56,46 @@ Just because HybridCLR is implemented at the native runtime level, the types of 
 
 Other hot update solutions are independent vm, and the relationship with il2cpp is essentially equivalent to the relationship of embedding lua in mono. Therefore, the type system is not uniform. In order to allow the hot update type to inherit some AOT types, an adapter needs to be written, and the type in the interpreter cannot be recognized by the type system of the main project. Incomplete features, troublesome development, and low operating efficiency.
 
-## Compatibility
+## Supported versions and platforms
 
-- Support 2019.4.x, 2020.3.x, 2021.3.x, 2022.3.x, 2023.2.x versions
-- Supports all platforms supported by il2cpp. At present, it has fully supported PC (Win32 and Win64), macOS (x86, x64, Arm64), Android (armv7, armv8), iOS (64bit), WebGL, **WeChat applet platform**, and the remaining platforms are yet to be tested.
-- Tested a large number of common game libraries, and did not find a library that is natively compatible with il2cpp but incompatible after using HybridCLR. As long as the library can work under the il2cpp backend, it can work normally under HybridCLR. Even those libraries that are incompatible with il2cpp due to AOT issues can now run normally because of HybridCLR's ability to expand il2cpp.
+- Support 2019.4.x, 2020.3.x, 2021.3.x, 2022.3.x full series of LTS versions. The `2023.2.0ax` version is also supported, but not released to the public.
+- Supports all il2cpp supported platforms
 
-## Stability Status
+## Online projects
 
-At present, **extremely stable** official versions 1.x, 2.x, and 3.x have been released, which are sufficient to meet the stability requirements of large and medium-sized commercial projects. Since the first game was launched on June 7, 2022, only one small bug occurred in the online project, and it was quickly fixed within a few hours.
+At present, there are **hundreds** of commercial projects that have been launched, and thousands or more that have been connected. Among them, **most leading companies** have already connected to HybridCLR.
+HybridCLR has been widely verified as a very efficient and stable hot update solution for Unity.
 
-At present, at least thousands of commercial game projects have completed access, and hundreds of them have been launched on both ends. The online projects include games such as MMORPG, heavy card, and heavy tower defense.
 
-Most leading companies such as Tencent, NetEase, Baidu, funplus, Perfect, Stacked Paper, and Byte have already connected to multiple projects and will soon (or already) go online.
+Although there are hundreds of projects that use HybridCLR and have been launched (AppStore or GooglePlay) in the industry, considering that most people are more concerned about the projects of leading companies,
+Below we list some of the leading companies that **have already connected to HybridCLR**.
+
+Since we generally do not collect project information from our clients,
+Coupled with the long project cycle of leading companies, there are fewer known online ones.
+
+|Company|Online Project 1|Online Project 2|Online Project 3|
+|-|-|-|-|
+|Tencent||||
+|NetEase|[Yaotai](https://yaotai.163.com/)|||
+|Baidu|[Xirang](https://vr.baidu.com/product/xirang)|||
+|funplus|[Bingo Aloha](https://play.google.com/store/apps/details?id=com.gm11.bingocraze&hl=en_US)|||
+| Gigabit | [Wonderful Fighter](https://apps.apple.com/cn/app/%E5%A5%87%E8%91%A9%E6%88%98%E6%96%97%E5%AE%B6/id1434798394)|||
+|Sunborn|[Girls Frontline 2](https://gf2.sunborngame.com/index)|||
+|Nuverse (byte dance)||||
+|Paper Games| |||
+|Lilith||||
+|bilibili||||
+|elex||||
+|babybus||||
+|JJ World||||
+|Yoo Zoo||||
+|ztgame||||
+|Sheng Qu games||||
+|Perfect World||||
+|Chang You|||
+|IGG||||
+|ZiLong Games||||
+|Hero Games||||
 
 ## Support and Contact
 
